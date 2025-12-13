@@ -41,9 +41,11 @@ let dependencies: [Package.Dependency] = [
     url: "https://github.com/grpc/grpc-swift-2.git",
     from: "2.2.1"
   ),
+  // NB: Fork with Swift 6.2+ build warnings fix (#1908)
+  // TODO: Switch back to apple/swift-protobuf when fix is released
   .package(
-    url: "https://github.com/apple/swift-protobuf.git",
-    from: "1.31.0"
+    url: "https://github.com/doozMen/swift-protobuf.git",
+    branch: "main"
   ),
 ]
 
