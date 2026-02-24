@@ -9,7 +9,7 @@ on:
 jobs:
   swift-license-check:
     name: Swift license headers check
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
 
   check-generated-code:
     name: Check generated code
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       image: swift:latest
     steps:
@@ -41,7 +41,7 @@ jobs:
 
   api-breakage-check:
     name: API breakage check
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       image: swift:latest
     steps:
