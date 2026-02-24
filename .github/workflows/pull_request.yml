@@ -36,7 +36,7 @@ jobs:
 
   construct-plugin-tests-matrix:
     name: Construct plugin tests matrix
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     outputs:
       plugin-tests-matrix: '${{ steps.generate-matrix.outputs.plugin-tests-matrix }}'
     steps:
